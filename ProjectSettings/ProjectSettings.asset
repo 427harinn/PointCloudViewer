@@ -381,7 +381,7 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: Required For AR.
+  cameraUsageDescription: "\u30AB\u30E1\u30E9\u3092\u4F7F\u7528\u3057\u307E\u3059"
   locationUsageDescription: 
   microphoneUsageDescription: 
   switchNMETAOverride: 
@@ -619,7 +619,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    4: UNITY_XR_ARKIT_LOADER_ENABLED
   additionalCompilerArguments: {}
   platformArchitecture:
     iPhone: 1
