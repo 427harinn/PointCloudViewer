@@ -5,6 +5,7 @@ namespace Share
 {
     public sealed class Point : MonoBehaviour
     {
+        //pointプレファブのON,OFFを切り替える
         [SerializeField]
         public IdentifiedPoint IdentifiedPoint;
 

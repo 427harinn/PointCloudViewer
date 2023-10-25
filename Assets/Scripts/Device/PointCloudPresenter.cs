@@ -9,6 +9,7 @@ namespace Device
 {
     public sealed class PointCloudPresenter : MonoBehaviour
     {
+        //iPhoneの実行画面で、特徴点群を表示する。
         [SerializeField]
         private Point pointPrefab;
 
@@ -27,6 +28,9 @@ namespace Device
                 .TakeUntilDestroy(this).Subscribe(OnChanged);
         }
 
+        //特徴点が変更されたときに呼び出される。
+        //現在の特徴点を一時的なリストに保持し、それらが新しい特徴点に存在しない場合非表示にする。
+        //新しい特徴点は表示する。
         private void OnChanged(IdentifiedPoint[] identifiedPoints)
         {
             var reserved = _points.Keys.ToArray();

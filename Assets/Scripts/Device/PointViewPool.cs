@@ -6,6 +6,7 @@ namespace Device
 {
     public sealed class PointViewPool : ObjectPool<Point>
     {
+        //特徴点群の各特徴点を視覚的に表現するためのオブジェクトプールを管理する
         private readonly Point _pointPrefab = default;
         private readonly Transform _parentTs = default;
 

@@ -9,6 +9,7 @@ namespace Device
 {
     public sealed class PackedMessageSender : MonoBehaviour
     {
+        //iPhoneの座標、角度と特徴点群の情報をUDP通信で送信するためのスクリプト
         [SerializeField]
         private UDPClientHolder udpClientHolder;
 
@@ -18,6 +19,7 @@ namespace Device
         [SerializeField]
         private Transform device;
 
+        
         private async UniTaskVoid Start()
         {
             await UniTask.Yield();
@@ -32,6 +34,7 @@ namespace Device
                 .TakeUntilDestroy(this).Subscribe(OnPointChanged);
         }
 
+        //特徴点群情報が変更されたときに実行される。特徴点群の情報をシリアライズし、udpClientHolderを使用してUDP通信する
         private void OnPointChanged(IdentifiedPoint[] identifiedPoints)
         {
             if (identifiedPoints.Length == 0)
@@ -45,7 +48,7 @@ namespace Device
             };
             udpClientHolder.Send(array.Serialize());
         }
-
+        //一定間隔でiPhoneの座標、角度を送信する。そしてそれをUDP通信で送信
         private void OnDevicePose(long _)
         {
             var devicePose = new PackedMessage.DevicePose
