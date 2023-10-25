@@ -211,6 +211,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointRoot: {fileID: 2146713307}
+--- !u!4 &529032446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 655587870947427954, guid: 25dabc5a6578045c8aaa8c6b6215376e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1781383628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1291014716
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +248,7 @@ Transform:
   - {fileID: 57413388}
   - {fileID: 125565820}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1456978500
 GameObject:
@@ -273,7 +279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1456978502
 MonoBehaviour:
@@ -348,7 +354,7 @@ PrefabInstance:
     - target: {fileID: 655587870947427954, guid: 25dabc5a6578045c8aaa8c6b6215376e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 655587870947427954, guid: 25dabc5a6578045c8aaa8c6b6215376e,
         type: 3}
@@ -491,13 +497,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928830252}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
+  m_LocalPosition: {x: 5.13, y: 0.05, z: 0.0010000044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 529032446}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 180, y: 90, z: -270}
 --- !u!114 &1928830256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +630,7 @@ Transform:
   m_Children:
   - {fileID: 1956175807}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2146713309
 MonoBehaviour:
@@ -655,7 +661,7 @@ PrefabInstance:
     - target: {fileID: 4563610074772513253, guid: 5bd3ece6f03464526abb8e8dc62905ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4563610074772513253, guid: 5bd3ece6f03464526abb8e8dc62905ff,
         type: 3}
