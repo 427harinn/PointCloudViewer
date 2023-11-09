@@ -18,6 +18,7 @@ namespace Viewer
 
         public void Init(PackedMessage.IdentifiedPointArray identifiedPointsArray)
         {
+            //Debug.Log("aaaa");
             this.IdentifiedPointArray = identifiedPointsArray;
             this.gameObject.name = identifiedPointsArray.Time.ToString(DateFormat);
 
@@ -30,7 +31,16 @@ namespace Viewer
                 p.gameObject.name = identifiedPoint.Identify.ToString();
                 pointsList.Add(p);
             }
+            
             Points = pointsList.ToArray();
+        }
+
+        public void ChangeColor(Color newColor)
+        {
+            foreach (var point in Points)
+            {
+                point.GetComponent<Renderer>().material.color = newColor;
+            }
         }
     }
 }

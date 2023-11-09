@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 2146713308}
   - component: {fileID: 2146713307}
   - component: {fileID: 2146713309}
+  - component: {fileID: 2146713310}
   m_Layer: 0
   m_Name: PointRoot
   m_TagString: Untagged
@@ -651,6 +652,22 @@ MonoBehaviour:
     value: 5
   Confidence:
     value: 0.5
+--- !u!114 &2146713310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146713306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9500e667e07c041e0ad04a32c3da774a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointRoot: {fileID: 2146713307}
+  radius: 5
+  lowDensityThreshold: 0.3
+  mediumDensityThreshold: 0.6
 --- !u!1001 &7963861312415604555
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ namespace Viewer
         }
 
         [SerializeField]
-        public ReactiveProperty<ColorScheme> Scheme = new ReactiveProperty<ColorScheme>(ColorScheme.White);
+        public ReactiveProperty<ColorScheme> Scheme = new ReactiveProperty<ColorScheme>(ColorScheme.Distance);
 
         [SerializeField]
         public FloatReactiveProperty Distance = new FloatReactiveProperty(5f);
@@ -56,6 +56,8 @@ namespace Viewer
         {
             Scheme.SetValueAndForceNotify(Scheme.Value);
         }
+
+
 
 #if UNITY_EDITOR
         private void OnValidate()
@@ -103,6 +105,7 @@ namespace Viewer
         private static Color SchemeDistance(IdentifiedPoint point)
         {
             var distance = Vector3.Distance(point.Position, point.CameraPosition);
+            Debug.Log($"Distance: {distance}"); // 特徴点の距離をログに出力
             return Color.HSVToRGB(Mathf.Clamp01(distance / DistanceLimit), HSVs, HSVv);
         }
 
