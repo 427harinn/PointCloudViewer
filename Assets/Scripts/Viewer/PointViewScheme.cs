@@ -73,7 +73,7 @@ namespace Viewer
             var points = pointRoot.PointSets.SelectMany(set => set.Points).ToArray();
             foreach (var p in points)
             {
-                p.ChangeFilter(FilterScheme);
+                //p.ChangeFilter(FilterScheme);
                 p.ChangeColor(colorScheme);
             }
         }
