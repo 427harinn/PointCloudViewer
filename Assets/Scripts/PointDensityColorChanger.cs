@@ -27,7 +27,7 @@ namespace Viewer
                 {
                     float density = CalculateDensity(points, i);
 
-                    Debug.Log(density);
+                    //Debug.Log(density);
                     // 密度に応じて色を変更
                     Color color = GetColorByDensity(density);
                     points[i].ChangeColor((identifiedPoint) => color);
