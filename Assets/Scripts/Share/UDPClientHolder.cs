@@ -116,7 +116,8 @@ namespace Share
         {
             return Dns.GetHostAddresses(Dns.GetHostName())
                 .Select(ipAddress => ipAddress.ToString())
-                .FirstOrDefault(s => s.StartsWith("192.168"));
+                //.FirstOrDefault(s => s.StartsWith("192.168"));
+                .FirstOrDefault(s => s.StartsWith("133.17"));
         }
     }
 }
